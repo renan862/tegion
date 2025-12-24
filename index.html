@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
 <head>
-  <title>Tegion | Automação de WhatsApp e Desenvolvimento Web no Rio de Janeiro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tegion | Automação, Chatbots IA e Desenvolvimento Web</title>
+  <meta name="description" content="A Tegion escala seu negócio com automação de WhatsApp, criação de Landing Pages de alta conversão, Chatbots com IA e sistemas sob medida. Solicite um orçamento.">
+  <meta name="keywords" content="automação whatsapp, programador, criação de sites, landing page, tegion, chatbot ia, desenvolvimento web, rio de janeiro">
 
-  <meta name="description" content="A Tegion oferece soluções de automação de WhatsApp, e-mail marketing, criação de landing pages e sistemas sob medida para escalar seu negócio no Rio de Janeiro.">
+  <link rel="icon" type="image/png" href="img/logo.png">
 
-  <meta name="keywords" content="programador rio de janeiro, automação whatsapp, criação de sites, landing page, tegion, sistemas web, chatbot ia">
-
-  <meta property="og:title" content="Tegion | Tecnologia e Automação Inteligente">
-  <meta property="og:description" content="Automatize processos e escale suas vendas com software de alta performance.">
-  <meta property="og:image" content="URL_DA_SUA_IMAGEM_DE_PROPAGANDA">
-  <meta property="og:url" content="https://seu-usuario.github.io/site-tegion">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tegion | Tecnologia e Automação Inteligente</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:title" content="Tegion | Tecnologia que Escala Negócios">
+  <meta property="og:description" content="Transforme processos manuais em lucro com nossas soluções de automação e software.">
+  <meta property="og:image" content="img/logo.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
@@ -48,14 +47,18 @@
 
     <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <h1 class="text-2xl font-black tracking-tighter text-blue-500 italic uppercase">TEGION</h1>
+            <a href="#" class="flex items-center gap-3 group">
+                <!--<img src="img/logo.png" alt="Tegion Logo" class="h-12 w-auto transition-transform group-hover:scale-110">-->
+                <h1 class="text-2xl font-black tracking-tighter text-blue-500 italic uppercase">TEGION</h1>
+            </a>
+
             <div class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-wider">
                 <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
                 <a href="#processo" class="hover:text-blue-400 transition">Processo</a>
                 <a href="#faq" class="hover:text-blue-400 transition">FAQ</a>
                 <a href="#contato" class="hover:text-blue-400 transition text-blue-400">Contato</a>
             </div>
-            <a href="https://wa.me/5521973769990" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-bold transition-all text-xs uppercase tracking-widest">
+            <a href="https://wa.me/5521973769990" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-bold transition-all text-xs uppercase tracking-widest hidden sm:block">
                 Falar Agora
             </a>
         </div>
@@ -189,22 +192,22 @@
                 </p>
                 
                 <div class="space-y-8">
-                    <div class="flex items-center gap-6">
-                        <div class="bg-blue-500/10 p-4 rounded-xl text-blue-500">
+                    <a href="https://wa.me/5521973769990" target="_blank" class="flex items-center gap-6 group">
+                        <div class="bg-blue-500/10 p-4 rounded-xl text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition">
                             <i data-lucide="phone-call"></i>
                         </div>
                         <div>
-                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">Telefone</p>
-                            <span class="font-bold text-xl">(21) 97376-9990</span>
+                            <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">WhatsApp / Telefone</p>
+                            <span class="font-bold text-xl group-hover:text-blue-400 transition">(21) 97376-9990</span>
                         </div>
-                    </div>
+                    </a>
                     <div class="flex items-center gap-6">
                         <div class="bg-blue-500/10 p-4 rounded-xl text-blue-500">
                             <i data-lucide="mail"></i>
                         </div>
                         <div>
                             <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">E-mail</p>
-                            <span class="font-bold text-xl">tegiontempany@gmail.com</span>
+                            <span class="font-bold text-xl uppercase text-sm">contato.tegion@gmail.com</span>
                         </div>
                     </div>
                 </div>
@@ -227,11 +230,19 @@
                     </div>
 
                     <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">WhatsApp / Telefone</label>
+                        <input type="tel" name="phone" id="phoneInput" required placeholder="(21) 99999-9999" maxlength="15"
+                               class="w-full px-5 py-4 rounded-xl transition-all font-medium">
+                    </div>
+
+                    <div>
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Objetivo do Projeto</label>
                         <select name="service" class="w-full px-5 py-4 rounded-xl transition-all font-medium">
-                            <option value="automacao">Automação de Vendas</option>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="automacao">Automação de Vendas (Zap/Email)</option>
                             <option value="site-app">Landing Page ou App</option>
-                            <option value="inteligencia-artificial">Consultoria em IA</option>
+                            <option value="chatbot-ia">Chatbot com IA</option>
+                            <option value="integracao">Integração de Sistemas</option>
                             <option value="outros">Outros</option>
                         </select>
                     </div>
@@ -253,7 +264,8 @@
     <footer class="bg-slate-950 border-t border-slate-900 py-16 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div>
-                <h1 class="text-3xl font-black tracking-tighter text-blue-500 italic mb-3">TEGION</h1>
+                <img src="img/logo.png" alt="Tegion Logo" class="h-20 w-auto mb-4 mx-auto md:mx-0">
+                <!--<h1 class="text-3xl font-black tracking-tighter text-blue-500 italic mb-3">TEGION</h1>-->
                 <p class="text-slate-600 text-sm font-medium">Desenvolvendo soluções que impulsionam negócios.<br>Rio de Janeiro, RJ.</p>
             </div>
             <div class="flex gap-6 text-slate-500">
@@ -267,13 +279,33 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Inicializa ícones do Lucide
+        // Inicializa ícones
         lucide.createIcons();
-        // Inicializa animações ao scroll (AOS)
+        // Inicializa animações
         AOS.init({
             duration: 1000,
             once: true,
             offset: 100
+        });
+
+        // SCRIPT DE MÁSCARA DE TELEFONE (Renan, esse é o código que formata o número)
+        const phoneInput = document.getElementById('phoneInput');
+        phoneInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+            value = value.substring(0, 11); // Limita a 11 dígitos
+
+            // Lógica da máscara para 10 ou 11 dígitos
+            if (value.length > 10) {
+                value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3'); // (11) 99999-9999
+            } else if (value.length > 5) {
+                value = value.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3'); // (11) 9999-
+            } else if (value.length > 2) {
+                value = value.replace(/^(\d{2})(\d{0,5})$/, '($1) $2'); // (11) 9
+            } else if (value.length > 0) {
+                 value = value.replace(/^(\d{0,2})$/, '($1'); // (1
+            }
+
+            e.target.value = value;
         });
     </script>
 </body>
